@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx tsc",
     "startmon": "npm run build && nodemon dist/server.js",
-    "watch": "rimraf ./dist && tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess 'node ./dist/server.js'",
+    "start": "rimraf ./dist && tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess 'node ./dist/server.js'",
     "dev-up": "db-migrate up -m ./migrations   --config ./migrations/db-config/dev.json",
     "dev-down": "db-migrate reset -m ./migrations  --config ./migrations/db-config/dev.json",
     "test-up": "db-migrate up -e test -m ./migrations   --config ./migrations/db-config/test.json ",
